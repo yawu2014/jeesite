@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thinkgem.jeesite.modules.finance.dao.PayFlowDao">
+    <sql id="column">
+        id,payname,fromway,toway,amount,create_by,create_date,update_by,update_date,remarks,del_flag
+    </sql>
+    <select id="get" resultType="PayFlow">
+        select
+        <include refid="column"/> 
+		from finance_payflow
+		where id=#{id}
+    </select>
+    <select id="findAllList" resultType="PayFlow">
+        select 
+        <include refid="column"/>
+        from finance_payflow
+        where del_flag =${DEL_FLAG_NORMAL}
+    </select>
+    <select id="findList" resultType="PayFlow">
+        select 
+        <include refid="column"/>
+        from finance_payflow
+        where del_flag =${DEL_FLAG_NORMAL}
+    </select>
+    <insert id="insert">
+        insert into 
+        finance_payflow(id,payname,fromway,toway,amount,create_by,create_date,update_by,update_date,remarks,del_flag)
+        		values(#{id},#{payName},#{fromWay},#{toWay},#{amount},#{createBy.id},#{createDate},#{updateBy.id},#{updateDate},#{remarks},#{delFlag})
+    </insert>
+    <update id="update">
+        update finance_payflow set
+	        payname=#{payName},
+	        fromway=#{fromWay},
+	        toway = #{toWay},
+	        amount = #{amount},
+	        update_by = #{updateBy.id},
+	        update_date = #{updateDate},
+	        remarks = #{remarks},
+	        del_flag = #{delFlag}
+        where id=#{id}
+    </update>
+</mapper>
