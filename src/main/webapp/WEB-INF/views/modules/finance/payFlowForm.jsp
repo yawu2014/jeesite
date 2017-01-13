@@ -4,6 +4,12 @@
 <head>
 <title>流水</title>
 <meta name="decorator" content="default"/>
+<style type="text/css">
+#s2id_payFrom,#s2id_payTo {
+	width: 150px;
+	text-align: center;
+}
+</style>
 </head>
 <body>
 	<ul class="nav nav-tabs">
@@ -25,8 +31,8 @@
 			<label class="control-label">支付来源:</label>
 			<div class="controls">
 				<select id="payFrom" name="fromWay">
-					<c:forEach items="${fromWay}" var="way">
-						<option value="${vay.id }">${way.name}</option>
+					<c:forEach items="${fromWay}" var="way" varStatus="state">
+						<option value="${vay.id }" selected="<c:if test="${state.first }">selected</c:if>">${way.name}</option>
 					</c:forEach>
 				</select>
 			</div>
@@ -35,7 +41,7 @@
 			<label class="control-label">支付对象:</label>
 			<div class="controls">
 				<select id="payTo" name="toWay">
-					<c:forEach items="${toWay}" var="way">
+					<c:forEach items="${toWay}" var="way" varStatus="state">
 						<option value="${way.id }">${way.name }</option>
 					</c:forEach>
 				</select>
@@ -53,4 +59,6 @@
 		</div>
 	</form:form>
 </body>
+<scritp>
+</scritp>
 </html>
