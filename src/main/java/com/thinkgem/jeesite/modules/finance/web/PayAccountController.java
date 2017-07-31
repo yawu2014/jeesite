@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.thinkgem.jeesite.common.config.Global;
+import com.thinkgem.jeesite.common.persistence.Page;
 import com.thinkgem.jeesite.common.web.BaseController;
 import com.thinkgem.jeesite.modules.finance.entity.PayAccount;
 import com.thinkgem.jeesite.modules.finance.service.PayAccountService;
@@ -35,8 +36,9 @@ public class PayAccountController extends BaseController {
 
 	@RequestMapping(value = { "list", "" })
 	public String list(PayAccount payAccount, HttpServletRequest request, HttpServletResponse response, Model model) {
-		List<PayAccount> list = payAccountService.findList(payAccount);
-		model.addAttribute("page", list);
+//		List<PayAccount> list = payAccountService.findList(payAccount);
+		Page<PayAccount> page = payAccountService.findPage(new Page<PayAccount>(request,response), payAccount);
+		model.addAttribute("page", page);
 		return "modules/finance/payAccountList";
 	}
 

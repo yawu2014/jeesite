@@ -21,7 +21,7 @@ public class PayFlow extends DataEntity<PayFlow> {
 	public PayFlow() {
 		super();
 	}
-
+	private long serialNo;//支付号,以当前时间戳未记录
 	private String fromWay;// 支付来源
 	private String toWay;// 支付对象
 	private String payName;// 款项
@@ -57,6 +57,14 @@ public class PayFlow extends DataEntity<PayFlow> {
 
 	public void setAmount(float amount) {
 		this.amount = amount;
+	}
+
+	public long getSerialNo() {
+		return serialNo;
+	}
+
+	public void setSerialNo(long serialNo) {
+		this.serialNo = serialNo;
 	}
 
 }

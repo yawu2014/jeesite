@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.thinkgem.jeesite.common.config.Global;
+import com.thinkgem.jeesite.common.persistence.Page;
 import com.thinkgem.jeesite.common.web.BaseController;
 import com.thinkgem.jeesite.modules.finance.entity.PayAccount;
 import com.thinkgem.jeesite.modules.finance.entity.PayFlow;
@@ -42,14 +43,14 @@ public class PayFlowController extends BaseController {
 
 	@RequestMapping(value = { "list", "" })
 	public String list(PayFlow payFlow, HttpServletRequest request, HttpServletResponse response, Model model) {
-		List<PayFlow> list = payFlowService.findList(payFlow);
-		model.addAttribute("page", list);
+//		List<PayFlow> list = payFlowService.findList(payFlow);
+		Page<PayFlow> page = payFlowService.findPage(new Page<PayFlow>(request,response), payFlow);
+		model.addAttribute("page", page);
 		return "modules/finance/payFlowList";
 	}
 
 	@RequestMapping(value = "form")
 	public String form(PayFlow payFlow, Model model) {
-
 		List<PayAccount> payAccounts = payAccountService.findAllList(null);
 		List<PayAccount> fromWay = new ArrayList<PayAccount>();
 		List<PayAccount> toWay = new ArrayList<PayAccount>();
@@ -82,6 +83,7 @@ public class PayFlowController extends BaseController {
 			addMessage(redirectAttributes, "演示模式，不允许操作！");
 			return "redirect:" + adminPath + "/finance/payflow/list?repage";
 		}
+		
 		payFlowService.save(payFlow);
 		addMessage(redirectAttributes, "保存流水" + payFlow.getPayName() + "成功!");
 		return "redirect:" + adminPath + "/finance/payflow/list?repage";

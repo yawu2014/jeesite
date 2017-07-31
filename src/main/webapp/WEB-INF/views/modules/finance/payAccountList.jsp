@@ -11,6 +11,31 @@
 		<li><a href="${ctx}/finance/payaccount/form">添加账户</a></li>
 	</ul><br/>
 	<%--总览全部账户 --%>
-	<h1>账户总览</h1>
+	<form:form id="searchForm" modelAttribute="payAccount" action="${ctx }/finance/payaccount" class="breadcrumb form-search">
+		<input type="hidden" id="pageNo" name="pageNo" value="${page.pageNo}"/>
+		<input type="hidden" id="pageSize" name="pageSize" value="${page.pageSize }"/>
+		<label>
+		账户类型:
+		</label>
+		<form:input path="type" htmlEscape="false" maxlength="50" class="input-medium"/>
+	</form:form>
+	<table id="contentTable" class="table table-striped table-bordered table-condensed">
+		<thead>
+			<tr>
+				<th>账户</th>
+				<th>类型</th>
+				<th>金额</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach items="${page.list }" var="item">
+				<tr>
+					<td>${item.name }</td>
+					<td>${item.type }</td>
+					<td>${item.amount }</td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
 </body>
 </html>
