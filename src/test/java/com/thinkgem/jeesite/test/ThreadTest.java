@@ -1,6 +1,12 @@
 package com.thinkgem.jeesite.test;
 
+import java.util.Objects;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.FutureTask;
+
 import org.junit.Test;
+
 
 public class ThreadTest {
 	private int temp = 0;
@@ -30,5 +36,19 @@ public class ThreadTest {
 		new Thread(run).start();
 	}
 	
-}
+	@Test
+	public void futherexe() {
+		Callable ctt = new Callable<Integer>() {
 
+			@Override
+			public Integer call() throws Exception {
+				int i = (int) (System.currentTimeMillis()%2);
+				System.out.println(Thread.currentThread().getName()+i);
+				return i;
+			}
+		};
+		Objects.compare("a", "b",null);
+		FutureTask<Integer> ft = new FutureTask<>(ctt);
+		System.out.println("xxx");
+	}
+}
