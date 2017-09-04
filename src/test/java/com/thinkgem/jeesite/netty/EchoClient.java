@@ -59,8 +59,10 @@ public class EchoClient {
 					ByteBuf delimiter = Unpooled.copiedBuffer("$_".getBytes());
 					// 使用特殊分隔符分割消息
 //					ch.pipeline().addLast(new DelimiterBasedFrameDecoder(1024,delimiter));
-					ch.pipeline().addLast(new FixedLengthFrameDecoder(20));
-					ch.pipeline().addLast(new StringDecoder());
+//					ch.pipeline().addLast(new FixedLengthFrameDecoder(20));
+//					ch.pipeline().addLast(new StringDecoder());
+					ch.pipeline().addLast("msgpack decoder", new MsgpackDecoder());
+					ch.pipeline().addLast("msgpack encoder", new MsgpackEncoder());
 					ch.pipeline().addLast(new EchoClientHandler());
 				}
 				

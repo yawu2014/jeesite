@@ -23,15 +23,22 @@ import io.netty.channel.ChannelHandlerContext;
 public class EchoClientHandler extends ChannelHandlerAdapter {
 	private int counter;
 	static final String ECHO_REQ = "Hi,welcome to Netty ";
+	private volatile int sendNumber = 10;
 	@Override
 	public void channelActive(ChannelHandlerContext ctx) throws Exception {
-		for(int i=0;i<100;i++) {
+		/*for(int i=0;i<100;i++) {
 			ctx.writeAndFlush(Unpooled.copiedBuffer(ECHO_REQ.getBytes()));
+		}*/
+		UserInfo[] userInfos = userInfo();
+		for(UserInfo info :userInfos) {
+			ctx.write(info);
 		}
+		ctx.flush();
 	}
 	@Override
 	public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 		System.out.println("This is "+ ++counter+" times receive server:["+msg+"]");
+		ctx.write(msg);
 	}
 	@Override
 	public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
@@ -41,5 +48,16 @@ public class EchoClientHandler extends ChannelHandlerAdapter {
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
 		cause.printStackTrace();
 		ctx.close();
+	}
+	private UserInfo[] userInfo() {
+		UserInfo[] userInfos = new UserInfo[sendNumber];
+		for(int i=0;i<sendNumber;i++) {
+			UserInfo info = new UserInfo();
+			info.setAge(i);
+			info.setName("ABCDEFG--->"+i);
+			userInfos[i] = info;
+		}
+		
+		return userInfos;
 	}
 }

@@ -65,8 +65,10 @@ public class EchoServer {
 					ByteBuf delimiter = Unpooled.copiedBuffer("$_".getBytes());
 					//消息最大长度为1024,如果最大长度未发现分隔符,则报错误
 //					ch.pipeline().addLast(new DelimiterBasedFrameDecoder(1024, delimiter));
-					ch.pipeline().addLast(new FixedLengthFrameDecoder(20));
-					ch.pipeline().addLast(new StringDecoder());
+//					ch.pipeline().addLast(new FixedLengthFrameDecoder(20));
+//					ch.pipeline().addLast(new StringDecoder());
+					ch.pipeline().addLast("msgpack encoder",new MsgpackEncoder());
+					ch.pipeline().addLast("msgpack decoder",new MsgpackDecoder());
 					ch.pipeline().addLast(new EchoServerHandler());
 				}
 				
