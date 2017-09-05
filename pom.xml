@@ -641,7 +641,72 @@
 		    <artifactId>protobuf-java</artifactId>
 		    <version>3.4.0</version>
 		</dependency>
-		
+		<dependency>
+              <groupId>org.springframework.data</groupId>
+              <artifactId>spring-data-mongodb</artifactId>
+              <version>1.3.0.RELEASE</version>
+            </dependency> 
+		<dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>2.11.1</version>
+        </dependency>
+        <dependency>
+        <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-all</artifactId>
+            <version>5.14.3</version>
+        </dependency>
+	<!-- lucene -->
+		<dependency>
+		    <groupId>org.apache.lucene</groupId>
+		    <artifactId>lucene-core</artifactId>
+		    <version>6.6.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.lucene</groupId>
+		    <artifactId>lucene-queryparser</artifactId>
+		    <version>6.6.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.lucene</groupId>
+		    <artifactId>lucene-queries</artifactId>
+		    <version>6.6.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-analyzers-common -->
+		<dependency>
+		    <groupId>org.apache.lucene</groupId>
+		    <artifactId>lucene-analyzers-common</artifactId>
+		    <version>6.6.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-highlighter -->
+		<dependency>
+		    <groupId>org.apache.lucene</groupId>
+		    <artifactId>lucene-highlighter</artifactId>
+		    <version>6.6.0</version>
+		</dependency>
+		<dependency>
+              <groupId>org.springframework.data</groupId>
+              <artifactId>spring-data-mongodb</artifactId>
+              <version>1.3.0.RELEASE</version>
+            </dependency>     
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>2.11.1</version>
+        </dependency>
+        <dependency>
+        <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-all</artifactId>
+            <version>5.14.3</version>
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/org.mongodb/bson -->
+		<dependency>
+		    <groupId>org.mongodb</groupId>
+		    <artifactId>bson</artifactId>
+		    <version>3.4.2</version>
+		</dependency>
+        
 		<!-- 自定义jar依赖包
 		<dependency>
 			<groupId>com.thinkgem.jeesite</groupId>
