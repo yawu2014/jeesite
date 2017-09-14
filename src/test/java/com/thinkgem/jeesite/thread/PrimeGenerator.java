@@ -4,13 +4,8 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.bson.util.annotations.GuardedBy;
-import org.bson.util.annotations.ThreadSafe;
-
 import com.google.common.collect.Lists;
-@ThreadSafe
 public class PrimeGenerator implements Runnable {
-	@GuardedBy("this")
 	private final List<BigInteger> primes = Lists.newArrayList();
 	private volatile boolean canceled;
 	@Override
@@ -34,7 +29,7 @@ public class PrimeGenerator implements Runnable {
 		PrimeGenerator generator = new PrimeGenerator();
 		new Thread(generator).start();
 		try{
-			SECONDS.sleep(1);
+//			SECONDS.sleep(1);
 			
 		}finally{
 			generator.cancel();

@@ -8,6 +8,8 @@ import java.io.InputStream;
 
 import org.junit.Test;
 
+import io.netty.util.internal.RecyclableArrayList;
+
 public class TestJava {
 	/**
 	 * 死锁
@@ -18,6 +20,7 @@ public class TestJava {
 			new Thread(new SyncAddRunnable(2, 1)).start();
 			new Thread(new SyncAddRunnable(1, 2)).start();
 		}
+//		RecyclableArrayList recyclableArrayList;
 	}
 	static class SyncAddRunnable implements Runnable{
 		int a,b;

@@ -5,6 +5,7 @@ package com.thinkgem.jeesite.netty.protobuf;
 
 import java.util.ArrayList;
 
+import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 
 import io.netty.channel.ChannelHandlerAdapter;
@@ -37,6 +38,7 @@ public class SubReqClientHandler extends ChannelHandlerAdapter {
 		ArrayList<String> address = Lists.newArrayList();
 		address.add("Liaoning");
 		builder.addAllAddress(address);
+		Splitter.on(",").trimResults().splitToList("");
 		return builder.build();
 	}
 	@Override
