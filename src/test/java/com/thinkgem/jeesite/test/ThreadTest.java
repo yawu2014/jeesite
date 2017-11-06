@@ -48,7 +48,7 @@ public class ThreadTest {
 			}
 		};
 		Objects.compare("a", "b",null);
-		FutureTask<Integer> ft = new FutureTask<>(ctt);
+		FutureTask<Integer> ft = new FutureTask(ctt);
 		System.out.println("xxx");
 	}
 }

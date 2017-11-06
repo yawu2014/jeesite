@@ -1,6 +1,13 @@
 package com.thinkgem.jeesite.concurrent;
 
+import java.util.concurrent.CompletionService;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorCompletionService;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import org.junit.Test;
 
@@ -23,7 +30,14 @@ public class StopThread {
 		stopRequest = true;
 	}
 	@Test
-	public void testStopThread(){
-		
+	public void testStopThread() throws InterruptedException, ExecutionException{
+		ExecutorService executor = Executors.newCachedThreadPool();
+		CompletionService service = new ExecutorCompletionService(executor);
+		service.submit(null);
+		Future<StopThread> future = service.take();
+		future.get();
+		AtomicInteger aInteger = new AtomicInteger();
+		aInteger.compareAndSet(1, 1);
+		aInteger.addAndGet(2);
 	}
 }

@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -82,5 +83,14 @@ public class testString {
 		String dig="44";
 		System.out.println(dig.substring(0, 1)+"."+dig.substring(1));
 		Map<String,String> map = new HashMap<String,String>();
+	}
+	@Test
+	public void function5() {
+		Iterator<String> it = Splitter.on("~").trimResults().omitEmptyStrings().split("2~5").iterator();
+		int i = 1;
+		while(it.hasNext()) {
+			System.out.println(i+":"+it.next());
+			i++;
+		}
 	}
 }
