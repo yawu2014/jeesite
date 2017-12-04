@@ -1,0 +1,103 @@
+Manifest-Version: 1.0
+Class-Path: commons-io-2.4.jar jersey-common-2.22.2.jar xmlenc-0.52.ja
+ r aspectjweaver-1.7.4.jar xz-1.0.jar spring-tx-4.1.9.RELEASE.jar xml-
+ apis-ext-1.3.04.jar activiti-bpmn-model-5.21.0.jar core-2.2.jar sprin
+ g-security-config-3.2.3.RELEASE.jar scala-reflect-2.11.7.jar dom4j-1.
+ 6.1.jar metrics-core-2.2.0.jar bson-3.4.2.jar httpcore-4.4.4.jar spri
+ ng-retry-1.2.0.RELEASE.jar ckfinderplugin-fileeditor-2.3.jar scala-co
+ mpiler-2.11.0.jar spring-messaging-4.3.9.RELEASE.jar java-xmlbuilder-
+ 1.0.jar json-simple-1.1.1.jar javase-2.2.jar metrics-graphite-3.1.2.j
+ ar xpp3_min-1.1.4c.jar batik-dom-1.7.jar tools.jar chill_2.11-0.8.0.j
+ ar jackson-annotations-2.2.3.jar scala-xml_2.11-1.0.1.jar curator-fra
+ mework-2.6.0.jar bcprov-jdk15on-1.51.jar jackson-core-2.2.3.jar aspec
+ tjrt-1.7.4.jar jackson-jaxrs-1.9.13.jar jaxb-api-2.2.2.jar mybatis-sp
+ ring-1.2.3.jar metrics-jvm-3.1.2.jar hadoop-mapreduce-client-shuffle-
+ 2.6.5.jar commons-dbcp-1.4.jar apacheds-i18n-2.0.0-M15.jar spark-laun
+ cher_2.11-2.2.0.jar api-util-1.0.0-M20.jar batik-script-1.7.jar avro-
+ ipc-1.7.7-tests.jar batik-awt-util-1.7.jar commons-beanutils-core-1.8
+ .0.jar activiti-image-generator-5.21.0.jar http-client-1.1.1.RELEASE.
+ jar osgi-resource-locator-1.0.1.jar javassist-3.18.1-GA.jar spring-ra
+ bbit-1.7.3.RELEASE.jar metrics-json-3.1.2.jar shiro-cas-1.2.3.jar spr
+ ing-data-commons-1.6.0.RELEASE.jar ckfinder-2.3.jar hadoop-mapreduce-
+ client-jobclient-2.6.5.jar batik-svggen-1.7.jar spring-amqp-1.7.3.REL
+ EASE.jar ojdbc14-10.2.0.4.0.jar jcl-over-slf4j-1.7.7.jar poi-3.9.jar 
+ commons-digester-1.8.jar hk2-utils-2.4.0-b34.jar commons-configuratio
+ n-1.6.jar xstream-1.4.7.jar api-asn1-api-1.0.0-M20.jar spring-test-4.
+ 1.9.RELEASE.jar apacheds-kerberos-codec-2.0.0-M15.jar commons-pool2-2
+ .0.jar hessian-4.0.7.jar jackson-module-scala_2.11-2.6.5.jar guava-17
+ .0.jar jersey-server-2.22.2.jar batik-transcoder-1.7.jar json4s-core_
+ 2.11-3.2.11.jar hadoop-yarn-server-common-2.6.5.jar spring-data-mongo
+ db-1.3.0.RELEASE.jar lucene-highlighter-6.6.0.jar unused-1.0.0.jar lu
+ cene-join-6.6.0.jar activiti-crystalball-5.21.0.jar json4s-ast_2.11-3
+ .2.11.jar xbean-asm5-shaded-4.4.jar activiti-engine-5.21.0.jar hadoop
+ -auth-2.6.5.jar commons-compress-1.4.1.jar stream-2.7.0.jar classmate
+ -1.1.0.jar py4j-0.10.4.jar httpclient-4.5.2.jar spark-core_2.11-2.2.0
+ .jar spring-context-support-4.1.9.RELEASE.jar batik-xml-1.7.jar cas-c
+ lient-core-3.2.1.jar slf4j-api-1.7.7.jar shiro-spring-1.2.3.jar avalo
+ n-framework-impl-4.3.1.jar chill-java-0.8.0.jar fastjson-1.1.40.jar R
+ oaringBitmap-0.5.11.jar jul-to-slf4j-1.7.7.jar freemarker-2.3.20.jar 
+ xmlbeans-2.3.0.jar jetty-util-6.1.26.jar commons-lang3-3.3.2.jar jack
+ son-module-jaxb-annotations-2.2.3.jar hk2-api-2.4.0-b34.jar zookeeper
+ -3.4.8.jar activiti-modeler-5.21.0.jar commons-pool-1.5.4.jar batik-c
+ odec-1.7.jar paranamer-2.3.jar avro-mapred-1.7.7-hadoop2.jar commons-
+ beanutils-1.9.1.jar activiti-common-rest-5.21.0.jar dozer-5.5.1.jar m
+ ysql-connector-java-5.1.30.jar fop-0.94.jar activiti-process-validati
+ on-5.21.0.jar batik-css-1.7.jar shiro-core-1.2.3.jar jersey-guava-2.2
+ 2.2.jar ehcache-web-2.0.4.jar batik-ext-1.7.jar activiti-spring-5.21.
+ 0.jar batik-gvt-1.7.jar scalap-2.11.0.jar spark-unsafe_2.11-2.2.0.jar
+  json4s-jackson_2.11-3.2.11.jar shiro-ehcache-1.2.3.jar mail-1.4.7.ja
+ r ivy-2.4.0.jar activiti-bpmn-converter-5.21.0.jar cglib-3.1.jar avro
+ -1.7.7.jar spring-expression-4.1.9.RELEASE.jar commons-codec-1.9.jar 
+ jackson-mapper-asl-1.9.13.jar commons-math3-3.4.1.jar kafka_2.11-0.10
+ .1.0.jar spring-beans-4.1.9.RELEASE.jar log4j-1.2.17.jar netty-all-5.
+ 0.0.Alpha1.jar activiti-explorer-5.21.0.jar leveldbjni-all-1.8.jar sp
+ ring-aop-4.1.9.RELEASE.jar xmpcore-5.1.2.jar commons-net-2.2.jar aval
+ on-framework-api-4.3.1.jar oro-2.0.8.jar javax.inject-2.4.0-b34.jar s
+ cala-parser-combinators_2.11-1.0.4.jar ckfinderplugin-imageresize-2.3
+ .jar lucene-core-6.6.0.jar hadoop-client-2.6.5.jar spring-web-4.1.9.R
+ ELEASE.jar batik-svg-dom-1.7.jar analyzer-2012_u6.jar jedis-2.5.1.jar
+  compress-lzf-1.0.3.jar jboss-marshalling-1.4.11.Final.jar jopt-simpl
+ e-4.9.jar ehcache-core-2.6.11.jar asm-4.2.jar hadoop-mapreduce-client
+ -app-2.6.5.jar batik-parser-1.7.jar javax.mail-1.5.2.jar kafka-client
+ s-0.10.1.0.jar xmlpull-1.1.3.1.jar h2-1.3.176.jar spring-jdbc-4.1.9.R
+ ELEASE.jar hadoop-yarn-common-2.6.5.jar lucene-queries-6.6.0.jar myba
+ tis-3.2.8.jar commons-httpclient-3.1.jar lucene-sandbox-6.6.0.jar act
+ iviti-json-converter-5.21.0.jar metadata-extractor-2.6.2.jar hadoop-y
+ arn-api-2.6.5.jar hadoop-mapreduce-client-core-2.6.5.jar thumbnailato
+ r-0.4.2.jar aopalliance-repackaged-2.4.0-b34.jar curator-recipes-2.6.
+ 0.jar xml-apis-1.3.04.jar protobuf-java-3.4.0.jar hadoop-hdfs-2.6.5.j
+ ar activation-1.1.1.jar amqp-client-4.0.2.jar slf4j-log4j12-1.7.7.jar
+  msgpack-0.6.12.jar javax.annotation-api-1.2.jar validation-api-1.1.0
+ .Final.jar lucene-memory-6.6.0.jar hk2-locator-2.4.0-b34.jar standard
+ -1.1.2.jar shiro-web-1.2.3.jar gson-2.2.4.jar curator-client-2.6.0.ja
+ r aopalliance-1.0.jar kryo-shaded-3.0.3.jar sitemesh-2.4.2.jar spring
+ -security-web-3.2.3.RELEASE.jar jersey-client-2.22.2.jar jersey-media
+ -jaxb-2.22.2.jar jline-0.9.94.jar spring-oxm-4.1.9.RELEASE.jar jersey
+ -container-servlet-core-2.22.2.jar hibernate-validator-5.2.4.Final.ja
+ r druid-1.0.18.jar batik-anim-1.7.jar hadoop-yarn-client-2.6.5.jar me
+ trics-core-3.1.2.jar batik-bridge-1.7.jar stax-api-1.0.1.jar batik-ut
+ il-1.7.jar jtds-1.3.1.jar poi-ooxml-3.9.jar mongo-java-driver-3.5.0.j
+ ar javax.ws.rs-api-2.0.1.jar scala-library-2.11.8.jar spring-webmvc-4
+ .1.9.RELEASE.jar objenesis-2.1.jar jackson-databind-2.2.3.jar jets3t-
+ 0.9.3.jar jersey-container-servlet-2.22.2.jar UserAgentUtils-1.13.jar
+  poi-ooxml-schemas-3.9.jar spring-security-core-3.2.3.RELEASE.jar min
+ log-1.3.0.jar avro-ipc-1.7.7.jar spring-security-crypto-3.2.3.RELEASE
+ .jar spring-orm-4.1.9.RELEASE.jar jackson-core-asl-1.9.13.jar snappy-
+ java-1.1.2.6.jar pyrolite-4.13.jar spark-tags_2.11-2.2.0.jar lz4-1.3.
+ 0.jar jackson-module-paranamer-2.6.5.jar commons-email-1.4.jar javaGe
+ om-0.11.1.jar hamcrest-core-1.3.jar spark-network-common_2.11-2.2.0.j
+ ar jackson-xc-1.9.13.jar jstl-1.2.jar spring-core-4.1.9.RELEASE.jar a
+ ctiviti-diagram-rest-5.21.0.jar joda-time-2.6.jar jboss-logging-3.2.1
+ .Final.jar spark-network-shuffle_2.11-2.2.0.jar htrace-core-3.0.4.jar
+  commons-crypto-1.0.0.jar mx4j-3.0.2.jar zkclient-0.9.jar imgscalr-li
+ b-4.2.jar stax-api-1.0-2.jar commons-lang-2.6.jar batik-js-1.7.jar lu
+ cene-analyzers-common-6.6.0.jar groovy-all-2.4.5.jar hadoop-mapreduce
+ -client-common-2.6.5.jar javax.servlet-api-3.1.0.jar commons-cli-1.2.
+ jar activemq-all-5.14.3.jar netty-3.9.9.Final.jar lucene-queryparser-
+ 6.6.0.jar xercesImpl-2.8.1.jar hadoop-common-2.6.5.jar jconsole.jar c
+ ommons-collections-3.2.1.jar junit-4.11.jar apache-ant-zip-2.3.jar js
+ r305-1.3.9.jar hadoop-annotations-2.6.5.jar commons-fileupload-1.3.1.
+ jar xmlgraphics-commons-1.2.jar base64-2.3.8.jar spring-context-4.1.9
+ .RELEASE.jar commons-logging-1.0.4.jar
+Main-Class: hadoop.spark.WordCount
+
